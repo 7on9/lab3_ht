@@ -81,7 +81,7 @@ Hiện tất cả lịch sử thay đổi trong nhánh
 $ git log --follow [file]
 Hiện các phiên bản của 1 file (kể cả đổi tên)
 $ git diff [first-branch]...[second-branch]
-So sánh sữ khác nhau giữa 2 branch
+So sánh sự khác nhau giữa 2 branch
 $ git show [commit]
 Xem lịch sử thay đổi của 1 commit
  
@@ -95,7 +95,9 @@ Tải các thay đổi của nhánh
  
 $ git merge [bookmark]/[branch]
 Hợp nhất 1 nhánh chỉ định vào nhánh hiện tại
+
 $ git push [alias] [branch]
-Tải những commit (thay đổi của file lên server)
+Tải những commit dưới local lên server
+
 $ git pull
 Tải tất cả các thay đổi từ server
