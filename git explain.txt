@@ -1,0 +1,101 @@
+CONFIGURE TOOLING
+Cài đặt cấu hình cho máy
+$ git config --global user.name "[name]"
+Cài đặt username sử dụng
+ 
+$ git config --global user.email "[email address]"
+Cài đặt email sử dụng
+ 
+$ git config --global color.ui auto
+Cài đặt màu tự động cho git cmd
+ 
+Tạo repositories – tạo “kho chứa code”
+ 
+$ git init [project-name]
+Khởi tạo git trong thư mục hiện hành
+ 
+$ git clone [url]
+Tải repo trên mạng về với toàn bộ dữ liệu/lịch sử thay đổi code
+ 
+Tạo thay đổi
+Xem thay đổi và gửi đi
+ 
+$ git status
+List ra các file mới hoặc các thay đổi để commitd(gửi đi)
+$ git add [file]
+Thêm file vào trong hàng đợi để commit
+ 
+$ git reset [file]
+Bỏ file khỏi hàng đợi nhưng không thay đổi nội dung file đó
+ 
+$ git diff
+Hiện các thay đổi mà chưa được đưa vào hàng đợi commit ( chưa được add)
+ 
+$ git diff --staged
+Xem các thay đổi của file đã được add vào hàng đợi commit và phiên bản cuối cùng của file đó
+ 
+$ git commit -m "[descriptive message]"
+Tạo ra 1 commit (bản ghi của tất cả các file tại thời điểm commit) trên local
+ 
+Thay đổi nhóm
+ 
+$ git branch
+Liệt kê tất cả các nhánh của repo
+$ git branch [branch-name]
+Tạo 1 nhánh
+ 
+$ git checkout [branch-name]
+Chuyển sang  1 nhánh
+$ git merge [branch]
+Combines the speciﬁed branch’s history into the current branch
+Hợp nhất thay đổi từ nhánh chỉ định vào nhánh hiện tại
+ 
+$ git branch -d [branch-name]
+Xóa 1 branch chỉ định
+ 
+$ git rm [file]
+Xóa 1 file trong thư mục và them thay đổi vào hàng đợi commit
+$ git rm --cached [file]
+Xóa 1 file trong phần quản lý phiên bản nhưng giữ nguyên phiên abn3 hiện tại
+$ git mv [file-original] [file-renamed]
+Đổi tên file và them vào hàng đợi commit
+ 
+$ git ls-files --other --ignored --exclude-standard
+Liệt kê tất cả các phần bị git bỏ qua
+*.log
+build/
+temp-*
+git sẽ không thể hiện/quản lý các file hay thư mục được liệt kê (match patern) trong file .gitignore
+ 
+$ git stash
+Tạm thời loại bỏ tất cả các thay đổi vào trong stash list
+$ git stash list
+Liệt kê tất cả các lần stash(lưu thay đổi)
+$ git stash pop
+Mở lại các thay đổi trong lần stash gần nhất
+$ git stash drop
+Bỏ 1 thay đổi trong stash list
+ 
+$ git log
+Hiện tất cả lịch sử thay đổi trong nhánh
+$ git log --follow [file]
+Hiện các phiên bản của 1 file (kể cả đổi tên)
+$ git diff [first-branch]...[second-branch]
+So sánh sữ khác nhau giữa 2 branch
+$ git show [commit]
+Xem lịch sử thay đổi của 1 commit
+ 
+$ git reset [commit]
+Hoàn tác các thay đổi về commit chỉ định
+$ git reset --hard [commit]
+Bỏ toàn bộ các lịch sử thay đổi về 1 commit chỉ định
+ 
+$ git fetch [bookmark]
+Tải các thay đổi của nhánh
+ 
+$ git merge [bookmark]/[branch]
+Hợp nhất 1 nhánh chỉ định vào nhánh hiện tại
+$ git push [alias] [branch]
+Tải những commit (thay đổi của file lên server)
+$ git pull
+Tải tất cả các thay đổi từ server
